@@ -1,50 +1,52 @@
 $(document).ready( function () {
-   tipCalculator();
-    clearfunction()
+    AssignCalculator();
+  
 });
-function tipCalculator(){
+function AssignCalculator(){
     console.log("let's get started");
 
-    tipPer = document.getElementById("tip").value;
-    totalAmount = document.getElementById("amount").value;
-    number = document.getElementById("people").value;
+    //  startMonth = document.getElementById("userStartMonth").value;
+    //  startDay = document.getElementById("userStartDay").value;
+    //  startYear = document.getElementById("userStartYear").value;
+    //  console.log( startMonth,startDay,startYear);
 
-    //converting string to float
-    var p = parseFloat(tipPer);
-    var a = parseFloat(totalAmount);
-    var n = parseFloat(number);
+    //  closeMonth = document.getElementById("userCloseMonth").value;
+    //  closeDay = document.getElementById("userCloseDay").value;
+    //  closeYear = document.getElementById("userCloseYear").value;
+    //  console.log( startMonth,startDay,startYear);
 
-        //console.log(a);
+    // assignmentType = document.getElementById("assignType").value;
+    
 
-    //checking the inputs
-     if (totalAmount == "")
-     {
-        alert("Enter the valid amount");
-     }
-     else if
-         (totalAmount == 0){
-            alert(" Enter the valid amount");
-     }
-     else if
-         (number == 0){
-            alert("Enter the valid number");
-     }else{
-
-                
-                tipCalculated = a /100 * p;
-
-                finalTip = tipCalculated /number;
-                //next line allows us to always have two digits after decimal point
-                finalTip = finalTip.toFixed(2);
-
-                console.log(finalTip);
-                $("#calculation").empty(); 
-                    $("#calculation").append(
-                        '<div style="border:1px solid black" >'+
-                        'Your tip Amount is $'+
-                                finalTip+ "."+'</div>'
-                        )
-
-                }
-              
+    $(document).on('change', '#userStartMonth', function () {
+        console.log($(this).val());
+    
+    });
+    $(document).on('change', '#userStartDay', function () {
+        console.log($(this).val());
+    
+    });
+     
+    $(document).on('change', '#userStartYear', function () {
+        console.log($(this).val());
+    
+    });
+    $(document).on('change', '#userCloseMonth', function () {
+       
+        console.log($(this).val());
+    });
+    $(document).on('change', '#userCloseDay', function () {
+        console.log($(this).val());
+    
+    });
+     
+    $(document).on('change', '#userCloseYear', function () {
+        console.log($(this).val());
+    });
+    $(document).on('change', '#assignType', function () {
+        console.log($(this).val());
+    
+    });
+     
+     
     }

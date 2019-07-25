@@ -21,12 +21,30 @@
                 <br><br>
 
                 <form action="/action_page.php">
-                    <div id=show>
-                 Starting Date:
-                                <div>
+                    <div>
+                        <h4>Starting Date:</h4>
+                    
+                            <div id=userInput>
         
-                                    Month 
-                                    <select id= tip>
+                                <strong>Month</strong> 
+                                    <select id=userStartMonth>
+                                            <option>None</option>
+                                            <option>January</option>
+                                            <option>Feburary</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                    </select>
+                                <strong>Day</strong>
+                                    <select id=userStartDay>
+                                            <option>None</option>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -34,49 +52,45 @@
                                             <option>5</option>
                                             <option>6</option>
                                             <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
+                        
+                            
                                     </select>
-                                    Day
-                                    <select id= tip>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                    </select>
-                                    Year
-                                    <select id= tip>
+                                <strong>Year</strong>
+                                    <select id=userStartYear>
+                                            <option>None</option>
                                             <option>2019</option>
                                             <option>2018</option>
                                             <option>2017</option>
                             
                                     </select>
-                                    <br><br>
+                                    <br>
 
                             </div>
                         </div>
                         
                         <div>
                             <div>
-                                Due Date:
+                                <h4>Due Date:</h4>
                          <div>
-                                 Month 
-                                 <select id= tip>
-                                         <option>1</option>
-                                         <option>2</option>
-                                         <option>3</option>
-                                         <option>4</option>
-                                         <option>5</option>
-                                         <option>6</option>
-                                         <option>7</option>
-                                         <option>8</option>
-                                         <option>9</option>
+                                <strong>Month</strong> 
+                                 <select id=userCloseMonth>
+                                         <option>None</option>
+                                         <option>January</option>
+                                         <option>Feburary</option>
+                                         <option>March</option>
+                                         <option>April</option>
+                                         <option>May</option>
+                                         <option>June</option>
+                                         <option>July</option>
+                                         <option>August</option>
+                                         <option>September</option>
+                                         <option>October</option>
+                                         <option>November</option>
+                                         <option>December</option>
                                  </select>
-                                 Day
-                                 <select id= tip>
+                                 <strong>Day</strong>
+                                 <select id=userCloseDay>
+                                        <option>None</option>
                                          <option>1</option>
                                          <option>2</option>
                                          <option>3</option>
@@ -87,8 +101,9 @@
                      
                          
                                  </select>
-                                 Year
-                                 <select id= tip>
+                                 <strong>Year</strong>
+                                 <select id=userCloseYear>
+                                        <option>None</option>
                                          <option>2019</option>
                                          <option>2018</option>
                                          <option>2017</option>
@@ -96,35 +111,31 @@
                                  </select>
  
                          </div> 
-                    </div>  
-
-                </div> 
-               
-                 <br>
-                        <div>
-                            Assignment Name : 
-                                <select id= tip>
-                                        <option>Business Report</option>
-                                        <option>Midterm</option>
-                                        <option>Lab Report</option>
-                                        <option>Literature Review</option>
-                                        <option>Presentations</option>
-                                        <option>Reflection</option>
-                                        <option>Research Essay</option>
-                                    
-                                </select>
-                        </div>
-            
+                    </div>       
+                    <br>
+                    Assignment Type:
+                    <select id= assignType>
+                            <option>None</option>
+                            <option>Annotated Bibliography</option>
+                            <option>Business report</option>
+                            <option>Cover Letter</option>
+                            <option>White Paper</option>
+                            <option>Resume</option>
+                            <option>Photography Assignment</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>Research Paper</option>
+                    </select>
                      </form> 
+
+                    </form> 
                                     <br><br>
                                 <button id = btn  onclick="tipCalculator(); return false;"> Submit</button>
-                                <input id = reset type="reset" value="clear" />
-  
+                                <input id = reset type="reset" value="clear">
+
+                        </div>   
                     </form> 
-                      
-                <div id=calculation> 
-                       
-                </div>  
+              
         </div>
     </body>
 </html>
