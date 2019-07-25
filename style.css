@@ -1,0 +1,59 @@
+#tip{
+    border: 1px solid gray;
+    
+}
+#btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    background: #5f357e;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  #btn:hover {
+    background: #8348ad;
+    border-bottom-color: #111;
+    color: white;
+  }
+  
+  #btn:active {
+    position: relative;
+    top: 1px;
+  }
+  
+  #reset{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    background: #8348ad;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+
+  }
+  #reset:hover {
+    background: #5f357e;
+    border-bottom-color: #111;
+    color: white;
+  }
+  #container {
+    height: 500px;
+    width: 1000px;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+  }
