@@ -1,5 +1,6 @@
 $(document).ready( function () {
     AssignCalculator();
+    Clear();
   
 });
 function AssignCalculator(){
@@ -12,18 +13,40 @@ function AssignCalculator(){
         closeMonth = document.getElementById("userCloseMonth").value;
         closeDay = document.getElementById("userCloseDay").value;
         closeYear = document.getElementById("userCloseYear").value;
-        console.log( closeMonth,closeDay,closeYear);
+       // console.log( closeMonth,closeDay,closeYear);
 
         assignmentType = document.getElementById("assignType").value;
-        console.log( assignmentType);
+        //console.log( assignmentType);
 
-        // if ( startMonth||(startDay && startYear) == "None")
-        // {
+        //  if ( startMonth||(startDay && startYear) == "None")
+        //  {
         //     alert("Enter the correct date.");
-        // }
+        //  }
 
-        // if ( assignmentType == AnnotatedBibliography)
-        // {
+        if (  assignmentType == "Annotated Bibliography")
+        {
+             $('#annotatedBibliography').show();
 
-        // }
+        }
+        if (  assignmentType == "Business Report")
+        {
+             $('#businessReport').show();
+
+        }
+
+        if (  assignmentType == "Research Paper")
+        {
+             $('#researchPaper').show();
+
+        }
+       
+        if (  assignmentType == "Reflection Paper")
+        {
+       
+             $('#reflectionPaper').show();
+
+        }
+    }         
+    function Clear(){
     }
+       
