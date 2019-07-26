@@ -3,50 +3,27 @@ $(document).ready( function () {
   
 });
 function AssignCalculator(){
-    console.log("let's get started");
 
-    //  startMonth = document.getElementById("userStartMonth").value;
-    //  startDay = document.getElementById("userStartDay").value;
-    //  startYear = document.getElementById("userStartYear").value;
-    //  console.log( startMonth,startDay,startYear);
+        startMonth = document.getElementById("userStartMonth").value;
+        startDay = document.getElementById("userStartDay").value;
+        startYear = document.getElementById("userStartYear").value;
+        console.log( startMonth, startDay,startYear);
 
-    //  closeMonth = document.getElementById("userCloseMonth").value;
-    //  closeDay = document.getElementById("userCloseDay").value;
-    //  closeYear = document.getElementById("userCloseYear").value;
-    //  console.log( startMonth,startDay,startYear);
+        closeMonth = document.getElementById("userCloseMonth").value;
+        closeDay = document.getElementById("userCloseDay").value;
+        closeYear = document.getElementById("userCloseYear").value;
+        console.log( closeMonth,closeDay,closeYear);
 
-    // assignmentType = document.getElementById("assignType").value;
-    
+        assignmentType = document.getElementById("assignType").value;
+        console.log( assignmentType);
 
-    $(document).on('change', '#userStartMonth', function () {
-        console.log($(this).val());
-    
-    });
-    $(document).on('change', '#userStartDay', function () {
-        console.log($(this).val());
-    
-    });
-     
-    $(document).on('change', '#userStartYear', function () {
-        console.log($(this).val());
-    
-    });
-    $(document).on('change', '#userCloseMonth', function () {
-       
-        console.log($(this).val());
-    });
-    $(document).on('change', '#userCloseDay', function () {
-        console.log($(this).val());
-    
-    });
-     
-    $(document).on('change', '#userCloseYear', function () {
-        console.log($(this).val());
-    });
-    $(document).on('change', '#assignType', function () {
-        console.log($(this).val());
-    
-    });
-     
-     
+        // if ( startMonth||(startDay && startYear) == "None")
+        // {
+        //     alert("Enter the correct date.");
+        // }
+
+        // if ( assignmentType == AnnotatedBibliography)
+        // {
+
+        // }
     }
