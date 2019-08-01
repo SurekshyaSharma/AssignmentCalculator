@@ -4,15 +4,32 @@ $(document).ready( function () {
   
 });
 function AssignCalculator(){
+     let today = new Date();
+     var TodayDate = today.toLocaleString('en-US',{ 
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric' }, {
+          hour: '2-digit', 
+          minute: '2-digit' });
+     console.log(TodayDate);
+     let currentMonth = today.getMonth();
+     let currentYear = today.getFullYear();
+     let currentDay = TodayDate.split(',')
+     let Day = currentDay[0];
+     console.log( Day);
 
-        startMonth = document.getElementById("userStartMonth").value;
-        startDay = document.getElementById("userStartDay").value;
-        startYear = document.getElementById("userStartYear").value;
-        console.log( startMonth, startDay,startYear);
 
-        closeMonth = document.getElementById("userCloseMonth").value;
-        closeDay = document.getElementById("userCloseDay").value;
-        closeYear = document.getElementById("userCloseYear").value;
+
+
+     //    startMonth = document.getElementById("userStartMonth").value;
+     //    startDay = document.getElementById("userStartDay").value;
+     //    startYear = document.getElementById("userStartYear").value;
+     //    console.log( startMonth, startDay,startYear);
+
+     //    closeMonth = document.getElementById("userCloseMonth").value;
+     //    closeDay = document.getElementById("userCloseDay").value;
+     //    closeYear = document.getElementById("userCloseYear").value;
        // console.log( closeMonth,closeDay,closeYear);
 
         assignmentType = document.getElementById("assignType").value;
