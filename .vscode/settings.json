@@ -1,8 +1,20 @@
 {
     "liveServer.settings.port": 5501,
     "cSpell.words": [
+        "daydropdown",
         "daydt",
+        "dayfield",
+        "duedate",
+        "duedt",
         "list",
-        "optn"
+        "monthdropdown",
+        "monthfield",
+        "monthtext",
+        "optn",
+        "populatedropdown",
+        "someform",
+        "thisyear",
+        "yeardropdown",
+        "yearfield"
     ]
 }

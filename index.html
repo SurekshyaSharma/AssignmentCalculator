@@ -26,20 +26,19 @@
             console.log(optn);
             selectbox.options.add(optn);
             }
-            ///////////// date //////////////////
+            /******************************************************appending today's date***************************************************/
             var today_date= dt_obj.getDate();
+            //console.log(today_date);
             function addOption_list1(){
             for (var i=1; i < 32;++i){
             addOption(document.drop_list.dt_list, i, i);
             if(i== today_date){document.drop_list.dt_list.options[i].selected=true;}
             }
             addOption_list2();
+            addOption_list3();
+            
             }
             
-            //////////////End of Date //////////
-            
-            
-            ///////////// Month //////////////////
             var current_month=dt_obj.getMonth() +1;
             function addOption_list2(){
             var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
@@ -47,13 +46,9 @@
             addOption(document.drop_list.Month_list, month[i], month[i]);
             if(i== current_month){document.drop_list.Month_list.options[i].selected=true;}
             }
-            addOption_list3();
             
             }
-            //////////////End of Month //////////
-            
-            
-            ///////////// Year //////////////////
+
             var current_year=dt_obj.getFullYear();
             function addOption_list3(){
             for (var i=0; i < 7;++i){
@@ -64,57 +59,60 @@
             }
             
             }
-            //////////////End of Year //////////
-/**********************************************************************************************/
+
+            /*******************************************************************************************************************************/
+
+            /******************************************************appending for due date***************************************************/
+          
+
+            var duedate= dt_obj.getDate();
             function addOption_list4(){
-                for (var i=1; i < 32;++i){
-                addOption(document.drop_list.Daydt_list, i, i);
-                if(i== today_date){document.drop_list.dt_list.options[i].selected=true;}
-                }
-                addOption_list5();
-                }
-                
-                //////////////End of Date //////////
-                
-                
-                ///////////// DueMonth //////////////////
-                var current_month=dt_obj.getMonth() +1;
-                function addOption_list5(){
-                var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-                for (var i=0; i < month.length;++i){
-                addOption(document.drop_list.MonthDt_list, month[i], month[i]);
-                if(i== current_month){document.drop_list.Month_list.options[i].selected=true;}
-                }
-                addOption_list6();
-                
-                }
-                //////////////End of Month //////////
-                
-                
-                ///////////// DueYear //////////////////
-                var current_year=dt_obj.getFullYear();
-                function addOption_list6(){
-                for (var i=0; i < 7;++i){
-                var j=current_year+i-2;
-                match_year=current_year+i;
-                addOption(document.drop_list.yearDt_list, j, j);
-                if((j-1)== current_year ){document.drop_list.year_list.options[i].selected=true;}
-                }
-                
-                }
+            for (var i=1; i < 32;++i){
+            addOption(document.drop_list.Duedt_list, i, i);
+            {document.drop_list.Duedt_list.options[0].selected=true;}
+            }
+            addOption_list5();
+            addOption_list6();
+
+            }
+            
+            var dueMonth=dt_obj.getMonth() +1;
+            function addOption_list5(){
+            var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+            for (var i=0; i < month.length;++i){
+            addOption(document.drop_list.DueMonth_list, month[i], month[i]);
+            document.drop_list.DueMonth_list.options[0].selected=true;
+            }
+            }
+
+            var dueYear=dt_obj.getFullYear();
+            function addOption_list6(){
+            for (var i=0; i < 7;++i){
+            var j=dueYear+i-2;
+            match_year=dueYear+i;
+            addOption(document.drop_list.DueYear_list, j, j);
+            {document.drop_list.DueYear_list.options[0].selected=true;}
+            }
+            
+            }
+            /**************************************************************************************************************************************/
             
             </script>
+
+            
+        
+
+           
     </head>
     <body>
         
 </head>
-<body onload=addOption_list1(); >
+<body onload="addOption_list1();addOption_list4();" >
 
 
         <div id= Container align=center>
                 <h2 >Assignment Calculator</h2>
-                <br><br>
-
+            
                 <form name="drop_list" action="/action_page.php" method="POST"  id=userInput>
                     <h4>Starting Date:</h4>
                         <strong>Day</strong> 
@@ -132,23 +130,26 @@
                         <Option value="" >Year</option>
                         </SELECT>
 
-                     <h4>Due Date:</h4>
+                    <form name="dropdown_list" action="/action_page.php" method="POST">
+                        <h4>Due Date:</h4>
                         <strong>Day</strong> 
-                        <SELECT NAME="DayDt_list">
+                        <SELECT NAME="Duedt_list">
                         <Option value="" >Date</option>
+                            <Option value="" >Date</option>
+
                         </SELECT>
                         
                         <strong>Month</strong>
-                        <SELECT NAME="MonthDt_list">
+                        <SELECT NAME="DueMonth_list">
                         <Option value="" >Month</option>
                         </SELECT>
                         
                         <strong>Year</strong>
-                        <SELECT NAME="yearDt_list">
+                        <SELECT NAME="DueYear_list">
                         <Option value="" >Year</option>
                         </SELECT>
-
-                        <br><br>
+                    </form>
+                     
                         <strong>Assignment Type:</strong>
                         <select id= assignType>
                                 <option>None</option>
@@ -157,57 +158,9 @@
                                 <option>Reflection Paper</option>
                                 <option>Research Paper</option>
                         </select>
+
                     
                 </form>
-
-                <form action="/action_page.php">
-                        
-                        <!-- <div>
-                            <div>
-                                <h4>Due Date:</h4>
-                         <div>
-                                <strong>Month</strong> 
-                                 <select id=userCloseMonth>
-                                         <option>None</option>
-                                         <option>January</option>
-                                         <option>February</option>
-                                         <option>March</option>
-                                         <option>April</option>
-                                         <option>May</option>
-                                         <option>June</option>
-                                         <option>July</option>
-                                         <option>August</option>
-                                         <option>September</option>
-                                         <option>October</option>
-                                         <option>November</option>
-                                         <option>December</option>
-                                 </select>
-                                 <strong>Day</strong>
-                                 <select id=userCloseDay>
-                                        <option>None</option>
-                                         <option>1</option>
-                                         <option>2</option>
-                                         <option>3</option>
-                                         <option>4</option>
-                                         <option>5</option>
-                                         <option>6</option>
-                                         <option>7</option>
-                     
-                         
-                                 </select>
-                                 <strong>Year</strong>
-                                 <select id=userCloseYear>
-                                        <option>None</option>
-                                         <option>2019</option>
-                                         <option>2018</option>
-                                         <option>2017</option>
-                         
-                                 </select> -->
- 
-                         </div> 
-                    </div>       
-                   
-                     </form> 
 
                     <form> 
                                     <br><br>

@@ -1,24 +1,30 @@
 $(document).ready( function () {
+   
     AssignCalculator();
-
-  
+   
 });
-function AssignCalculator(){
-     let today = new Date();
-     var TodayDate = today.toLocaleString('en-US',{ 
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric' }, {
-          hour: '2-digit', 
-          minute: '2-digit' });
-     console.log(TodayDate);
-     let currentMonth = today.getMonth();
-     let currentYear = today.getFullYear();
-     let currentDay = TodayDate.split(',')
-     let Day = currentDay[0];
-     console.log( Day);
 
+function AssignCalculator(){
+    
+   let today = new Date();
+    var TodayDate = today.toLocaleString('en-US',{ 
+         weekday: 'long',
+         year: 'numeric',
+         month: 'long',
+         day: 'numeric' }, {
+         hour: '2-digit', 
+         minute: '2-digit' });
+ 
+    let currentMonth = today.getMonth() +1;
+    let currentYear = today.getFullYear();
+    let currentDay =  today.getDay();
+    console.log(TodayDate);
+    //console.log(currentDay);
+    console.log(currentMonth);
+    console.log(currentYear);
+    $("#userCloseMonth").append(
+      '<option>'+currentMonth+'</option>')
+  
 
 
 
