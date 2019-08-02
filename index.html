@@ -99,10 +99,6 @@
             
             </script>
 
-            
-        
-
-           
     </head>
     <body>
         
@@ -114,7 +110,7 @@
                 <h2 >Assignment Calculator</h2>
             
                 <form name="drop_list" action="/action_page.php" method="POST"  id=userInput>
-                    <h4>Starting Date:</h4>
+                        <h4>Starting Date:</h4>
                         <strong>Day</strong> 
                         <SELECT NAME="dt_list" id=userStartDay>
                         <Option value="" >Date</option>
@@ -130,7 +126,7 @@
                         <Option value="" >Year</option>
                         </SELECT>
 
-                    <form name="dropdown_list" action="/action_page.php" method="POST">
+                        <form name="dropdown_list" action="/action_page.php" method="POST">
                         <h4>Due Date:</h4>
                         <strong>Day</strong> 
                         <SELECT NAME="Duedt_list" id=userCloseDay>
@@ -146,32 +142,36 @@
                         <SELECT NAME="DueYear_list" id=userCloseYear>
                         <Option value="" >None</option>
                         </SELECT>
-                    </form>
-                     
+                        </form>
+                        
                         <strong>Assignment Type:</strong>
                         <select id= assignType>
-                                <option>None</option>
-                                <option>Annotated Bibliography</option>
-                                <option>Business Report</option>
-                                <option>Reflection Paper</option>
-                                <option>Research Paper</option>
+                        <option>None</option>
+                        <option>Annotated Bibliography</option>
+                        <option>Business Report</option>
+                        <option>Reflection Paper</option>
+                        <option>Research Paper</option>
                         </select>
 
                     
                 </form>
+                        <div id='submitResult'>
+                        <br>
+                        <p>Days Left:</p>
+                        </div>
 
                     <form> 
-                                    <br><br>
-                                <button id = btn  onclick="AssignCalculator(); return false;"> Calculate</button>
-                                <button id = btn> Clear</button>
-                                <!-- <button type="reset" value="Reset">Reset</button> -->
-                               
+                        <br><br>
+                        <button id = btn  onclick="AssignCalculator(); return false;"> Calculate</button>
+                        <button id = btn> Clear</button>
+                        <!-- <button type="reset" value="Reset">Reset</button> -->          
                     </form> 
                     
                     <div id='submitResult'>
 
-                     
                     </div>
+
+                  
               
         </div>
     </body>

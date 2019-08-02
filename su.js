@@ -6,7 +6,7 @@ $(document).ready( function () {
 
 function AssignCalculator(){
     
-   let today = new Date();
+    let today = new Date();
     var TodayDate = today.toLocaleString('en-US',{ 
          weekday: 'long',
          year: 'numeric',
@@ -92,4 +92,3 @@ function AssignCalculator(){
       
     }         
    
-       
