@@ -18,30 +18,21 @@ function AssignCalculator(){
     let currentMonth = today.getMonth() +1;
     let currentYear = today.getFullYear();
     let currentDay =  today.getDay();
-    console.log(TodayDate);
-    //console.log(currentDay);
-    console.log(currentMonth);
-    console.log(currentYear);
-    $("#userCloseMonth").append(
-      '<option>'+currentMonth+'</option>')
-  
+   //  console.log(TodayDate);
+   //  console.log(currentMonth);
+   //  console.log(currentYear);
 
+        startMonth = document.getElementById("userStartMonth").value;
+        startDay = document.getElementById("userStartDay").value;
+        startYear = document.getElementById("userStartYear").value;
+        console.log('Day:', startDay,'Month:',startMonth, 'Year:',startYear);
 
-
-     //    startMonth = document.getElementById("userStartMonth").value;
-     //    startDay = document.getElementById("userStartDay").value;
-     //    startYear = document.getElementById("userStartYear").value;
-     //    console.log( startMonth, startDay,startYear);
-
-     //    closeMonth = document.getElementById("userCloseMonth").value;
-     //    closeDay = document.getElementById("userCloseDay").value;
-     //    closeYear = document.getElementById("userCloseYear").value;
-       // console.log( closeMonth,closeDay,closeYear);
+        submitMonth = document.getElementById("userCloseMonth").value;
+        submitDay = document.getElementById("userCloseDay").value;
+        submitYear = document.getElementById("userCloseYear").value;
+        console.log('Day:',submitDay,'Month:',submitMonth,'Year:',submitYear);
 
         assignmentType = document.getElementById("assignType").value;
-        //console.log( assignmentType);
-        var calculateDays;
-
      //     if ( startMonth||(startDay && startYear) = "")
      //     {
      //        alert("Enter the correct date.");

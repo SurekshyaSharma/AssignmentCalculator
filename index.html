@@ -22,8 +22,8 @@
             var optn = document.createElement("OPTION");
             optn.text = text;
             optn.value = value;
-            console.log(value);
-            console.log(optn);
+            /*console.log(value);
+            console.log(optn);*/
             selectbox.options.add(optn);
             }
             /******************************************************appending today's date***************************************************/
@@ -116,36 +116,36 @@
                 <form name="drop_list" action="/action_page.php" method="POST"  id=userInput>
                     <h4>Starting Date:</h4>
                         <strong>Day</strong> 
-                        <SELECT NAME="dt_list">
+                        <SELECT NAME="dt_list" id=userStartDay>
                         <Option value="" >Date</option>
                         </SELECT>
                         
                         <strong>Month</strong>
-                        <SELECT NAME="Month_list">
+                        <SELECT NAME="Month_list" id=userStartMonth>
                         <Option value="" >Month</option>
                         </SELECT>
                         
                         <strong>Year</strong>
-                        <SELECT NAME="year_list">
+                        <SELECT NAME="year_list" id=userStartYear>
                         <Option value="" >Year</option>
                         </SELECT>
 
                     <form name="dropdown_list" action="/action_page.php" method="POST">
                         <h4>Due Date:</h4>
                         <strong>Day</strong> 
-                        <SELECT NAME="Duedt_list">
+                        <SELECT NAME="Duedt_list" id=userCloseDay>
                         <Option value="" >Date</option>
                             <Option value="" >Date</option>
 
                         </SELECT>
                         
                         <strong>Month</strong>
-                        <SELECT NAME="DueMonth_list">
+                        <SELECT NAME="DueMonth_list" id=userCloseMonth>
                         <Option value="" >Month</option>
                         </SELECT>
                         
                         <strong>Year</strong>
-                        <SELECT NAME="DueYear_list">
+                        <SELECT NAME="DueYear_list" id=userCloseYear>
                         <Option value="" >Year</option>
                         </SELECT>
                     </form>
