@@ -1,8 +1,10 @@
 $(document).ready( function () {
    
     AssignCalculator();
+    dateDiffInDays()
    
 });
+
 
 function AssignCalculator(){
 
@@ -17,14 +19,7 @@ function AssignCalculator(){
       //   console.log('Day:',submitDay,'Month:', submitMonth,'Year:',submitYear);
 
         /*************INput type**************************************************************** */
-      start = document.getElementById("startDate").value;
-      var startDate = start.split("-");
-      console.log(startDate[0], startDate[1],startDate[2]); 
-
-      submit = document.getElementById("dueDate").value;
-      var submitDate = submit.split("-");
-      console.log(submitDate[0], submitDate[1],submitDate[2]); 
-       
+      
       assignmentType = document.getElementById("assignType").value;
     
         if (  assignmentType == "Annotated Bibliography")
@@ -81,4 +76,38 @@ function AssignCalculator(){
       
     }         
    
-       
+    function dateDiffInDays()
+    {
+          start = document.getElementById("startDate").value;
+          var startDate = start.split("-");
+          console.log(startDate[0], startDate[1],startDate[2]); 
+          submit = document.getElementById("dueDate").value;
+          var submitDate = submit.split("-");
+          console.log(submitDate[0], submitDate[1],submitDate[2]); 
+    
+         //   var calculation = submitDate[2] -startDate[2];
+         //   console.log(calculation);
+          
+          var date_diff_indays = function(start, submit) {
+            dt1 = new Date(start);
+            dt2 = new Date(submit);
+            return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+            }
+            console.log(date_diff_indays(start, submit));
+        
+            if (date_diff_indays(start, submit)== 0){
+    
+               ($("#daysLeft").empty());
+         
+               $("#daysLeft").append(
+                  '<p>'+'Days Left for submission:'+ '</p>')
+         
+               }else{
+         
+               ($("#daysLeft").empty());
+         
+                $("#daysLeft").append(
+               '<p>'+'Days Left for submission:'+' '+ date_diff_indays(start, submit)+' '+'days'+ '</p>')
+               }
+               
+    }
