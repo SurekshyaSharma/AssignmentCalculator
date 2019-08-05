@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>AssignmentCalculator</title>
+        <title>Calculator</title>
 
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
 
         <script type="text/javascript" src="./su.js"></script>
    
-        <script type="text/javascript"> 
+        <!-- <script type="text/javascript"> 
             var dt_obj= new Date();
             function addOption(selectbox,text,value )
             {
@@ -97,20 +97,35 @@
             }
             /**************************************************************************************************************************************/
             
-            </script>
+            </script> -->
 
     </head>
     <body>
         
 </head>
-<body onload="addOption_list1();addOption_list4();" >
-
+<body>
+        <!--  goes in the body header onload="addOption_list1();addOption_list4();"  -->
 
         <div id= Container align=center>
                 <h2 >Assignment Calculator</h2>
-            
+
+                <div> 
+                        <label for="start">Start date:</label>
+                        <input type="date" id="startDate" name="trip-start"
+                            value="2019-08-22"
+                            min="2019-01-01" max="201912-31"> 
+                        </div>
+                        <br>
+                        <div> 
+                            <label for="due">Due date:</label>
+                            <input type="date" id="dueDate" name="trip-start"
+                            value="2019-07-22"
+                            min="2018-01-01" max="2019-12-31">   
+                        </div>
+   
+       
                 <form name="drop_list" action="/action_page.php" method="POST"  id=userInput>
-                        <h4>Starting Date:</h4>
+                        <!-- <h4>Starting Date:</h4>
                         <strong>Day</strong> 
                         <SELECT NAME="dt_list" id=userStartDay>
                         <Option value="" >Date</option>
@@ -142,7 +157,8 @@
                         <SELECT NAME="DueYear_list" id=userCloseYear>
                         <Option value="" >None</option>
                         </SELECT>
-                        </form>
+                        </form> -->
+                        <br>
                         
                         <strong>Assignment Type:</strong>
                         <select id= assignType>
@@ -157,7 +173,7 @@
                 </form>
                         <div id='Datenoti'>
                         <br>
-                        <p>Days Left:</p>
+                        <p>Days Left for submission:</p>
                         </div>
 
                     <form> 

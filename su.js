@@ -5,39 +5,28 @@ $(document).ready( function () {
 });
 
 function AssignCalculator(){
+
+      //   startMonth = document.getElementById("userStartMonth").value;
+      //   startDay = document.getElementById("userStartDay").value;
+      //   startYear = document.getElementById("userStartYear").value;
+      //   console.log( startMonth, startYear);
+
+      //   submitMonth = document.getElementById("userCloseMonth").value;
+      //   submitDay = document.getElementById("userCloseDay").value;
+      //   submitYear = document.getElementById("userCloseYear").value;
+      //   console.log('Day:',submitDay,'Month:', submitMonth,'Year:',submitYear);
+
+        /*************INput type**************************************************************** */
+      start = document.getElementById("startDate").value;
+      var startDate = start.split("-");
+      console.log(startDate[0], startDate[1],startDate[2]); 
+
+      submit = document.getElementById("dueDate").value;
+      var submitDate = submit.split("-");
+      console.log(submitDate[0], submitDate[1],submitDate[2]); 
+       
+      assignmentType = document.getElementById("assignType").value;
     
-    let today = new Date();
-    var TodayDate = today.toLocaleString('en-US',{ 
-         weekday: 'long',
-         year: 'numeric',
-         month: 'long',
-         day: 'numeric' }, {
-         hour: '2-digit', 
-         minute: '2-digit' });
- 
-    let currentMonth = today.getMonth() +1;
-    let currentYear = today.getFullYear();
-    let currentDay =  today.getDay();
-   //  console.log(TodayDate);
-   //  console.log(currentMonth);
-   //  console.log(currentYear);
-
-        startMonth = document.getElementById("userStartMonth").value;
-        startDay = document.getElementById("userStartDay").value;
-        startYear = document.getElementById("userStartYear").value;
-        console.log('Day:', startDay,'Month:',startMonth, 'Year:',startYear);
-
-        submitMonth = document.getElementById("userCloseMonth").value;
-        submitDay = document.getElementById("userCloseDay").value;
-        submitYear = document.getElementById("userCloseYear").value;
-        console.log('Day:',submitDay,'Month:',submitMonth,'Year:',submitYear);
-
-        assignmentType = document.getElementById("assignType").value;
-     //     if ( startMonth||(startDay && startYear) = "")
-     //     {
-     //        alert("Enter the correct date.");
-     //     }
-
         if (  assignmentType == "Annotated Bibliography")
         {
           $("#submitResult").empty();
@@ -92,3 +81,4 @@ function AssignCalculator(){
       
     }         
    
+       
