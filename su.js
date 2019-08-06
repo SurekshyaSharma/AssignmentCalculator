@@ -1,24 +1,22 @@
 $(document).ready( function () {
    
-    AssignCalculator();
     dateDiffInDays()
    
 });
-  
    
     function dateDiffInDays()
     {
-          start = document.getElementById("startDate").value;
-          var startDate = start.split("-");
-          console.log(startDate[0], startDate[1],startDate[2]); 
-          submit = document.getElementById("dueDate").value;
-          var submitDate = submit.split("-");
-          console.log(submitDate[0], submitDate[1],submitDate[2]); 
+         start = document.getElementById("startDate").value;
+         var startDate = start.split("-");
+         console.log(startDate[0], startDate[1],startDate[2]); 
+         submit = document.getElementById("dueDate").value;
+         var submitDate = submit.split("-");
+         console.log(submitDate[0], submitDate[1],submitDate[2]); 
     
          //   var calculation = submitDate[2] -startDate[2];
          //   console.log(calculation);
           
-          var date_diff_indays = function(start, submit) {
+         var date_diff_indays = function(start, submit) {
          dt1 = new Date(start);
          dt2 = new Date(submit);
          return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
@@ -26,7 +24,7 @@ $(document).ready( function () {
          console.log(date_diff_indays(start, submit));
       /**********************************************************Checking if o difference dont show any dates***************************************************************************************************************** */
       
-               if (date_diff_indays(start, submit)!= 0){
+            if (date_diff_indays(start, submit)!= 0){
       
             ($("#daysLeft").empty());
       
@@ -55,6 +53,13 @@ $(document).ready( function () {
             }
 
             assignmentType = document.getElementById("assignType").value;
+            console.log(assignmentType);
+
+            if ( (date_diff_indays(start, submit)>0)&&assignmentType == "None"){
+               $("#daysLeft").hide();
+               alert("Missing Assignment Type!!");
+
+            }
     
             if (  assignmentType == "Annotated Bibliography")
             {
