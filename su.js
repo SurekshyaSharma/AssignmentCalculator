@@ -5,7 +5,6 @@ $(document).ready( function () {
    
 });
 
-
 function AssignCalculator(){
 
       //   startMonth = document.getElementById("userStartMonth").value;
@@ -20,7 +19,7 @@ function AssignCalculator(){
 
         /*************INput type**************************************************************** */
       
-      assignmentType = document.getElementById("assignType").value;
+        assignmentType = document.getElementById("assignType").value;
     
         if (  assignmentType == "Annotated Bibliography")
         {
@@ -73,7 +72,6 @@ function AssignCalculator(){
               )
 
         }
-      
     }         
    
     function dateDiffInDays()
@@ -89,25 +87,46 @@ function AssignCalculator(){
          //   console.log(calculation);
           
           var date_diff_indays = function(start, submit) {
-            dt1 = new Date(start);
-            dt2 = new Date(submit);
-            return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
-            }
-            console.log(date_diff_indays(start, submit));
-        
-            if (date_diff_indays(start, submit)== 0){
-    
-               ($("#daysLeft").empty());
-         
+         dt1 = new Date(start);
+         dt2 = new Date(submit);
+         return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+         }
+         console.log(date_diff_indays(start, submit));
+      /**********************************************************Checking if o difference dont show any dates***************************************************************************************************************** */
+         if (date_diff_indays(start, submit)== 0){
+   
+            ($("#daysLeft").empty());
+      
+            $("#daysLeft").append(
+               '<p>'+'Days Left for submission:'+ '</p>')
+      
+         }else{
+      
+            ($("#daysLeft").empty());
+      
                $("#daysLeft").append(
-                  '<p>'+'Days Left for submission:'+ '</p>')
-         
-               }else{
-         
-               ($("#daysLeft").empty());
-         
-                $("#daysLeft").append(
-               '<p>'+'Days Left for submission:'+' '+ date_diff_indays(start, submit)+' '+'days'+ '</p>')
-               }
-               
+            '<p>'+'Days Left for submission:'+' '+ date_diff_indays(start, submit)+' '+'days'+ '</p>')
+            }   
+      /*************************************************************************************************************************************************************************** */
+            if(date_diff_indays(start, submit)<0) {
+	
+               $("#daysLeft").append(
+                  "<b>Negative Number of Days:</b> Probably you entered the dates wrong...\n")
+            
+            }else if(date_diff_indays(start, submit)<0)  {
+            
+               $("#daysLeft").append("Hurry up !!!<br You have less than a week. />\n")
+            
+            
+            }else if(date_diff_indays(start, submit)>7) {
+            
+            	$("#daysLeft").append("Looks like you have enough time.<br>Let's plan accordingly.\n")
+            
+            }
+            
+            if(date_diff_indays(start, submit)>99) {
+               $("#daysLeft").append( "It's never too early to start!<br />\n")
+            }
+            
+           AssignCalculator();
     }
