@@ -93,14 +93,14 @@ function AssignCalculator(){
          }
          console.log(date_diff_indays(start, submit));
       /**********************************************************Checking if o difference dont show any dates***************************************************************************************************************** */
-         if (date_diff_indays(start, submit)== 0){
+        
    
-            ($("#daysLeft").empty());
+            // ($("#daysLeft").empty());
       
-            $("#daysLeft").append(
-               '<p>'+'Days Left for submission:'+ '</p>')
+            // $("#daysLeft").append(
+            //    '<p>'+'Days Left for submission:'+ '</p>')
       
-         }else{
+               if (date_diff_indays(start, submit)!= 0){
       
             ($("#daysLeft").empty());
       
