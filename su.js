@@ -69,7 +69,7 @@ $(document).ready( function () {
                $("#submitResult").append(
                      ' <br></br>'+
                      '<div>'+
-                     '<p> Note: This is how you start</p>'+  '<br>'+
+                     '<p> Note: This is how you start.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>'+
                      ' `<a href="https://writingcenter.unc.edu/tips-and-tools/understanding-assignments/" target="_blank">Read through the assignment</a>`'+
                   '</div>'
                      )
@@ -84,7 +84,7 @@ $(document).ready( function () {
                    ' <br></br>'+
                    '<div>'+
                    '<p>'+ 'Note: A business report is an evaluation or assessment of a particular issue or set of circumstances'+
-                   'or financial operations that relate to the performance of a business'+'</p>'+  '<br>'+
+                   'or financial operations that relate to the performance of a business.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'+'</p>'+
                '`<a href="https://writingcenter.unc.edu/tips-and-tools/understanding-assignments/" target="_blank">How to write a Business Paper</a>`'+
                '</div>'
                   )
@@ -114,7 +114,7 @@ $(document).ready( function () {
               $("#submitResult").append(
                ' <br></br>'+
                '<div>'+
-               '<p>'+ 'Note: A reflection paper is your chance to add your thoughts and analysis to what you have read and experienced. A reflection paper is meant to illustrate your understanding of the material and how it affects your ideas and possible practice in future.</p>'+  '<br>'+
+               '<p>'+ 'Note: A reflection paper is your chance to add your thoughts and analysis to what you have read and experienced.'+'<br>'+ 'A reflection paper is meant to illustrate your understanding of the material and how it affects your ideas and possible practice in future.</p>'+  '<br>'+
                '`<a href="https://www.wikihow.com/Write-a-Reflection-Paper" target="_blank">Take some google help</a>`'+
                '</div>'
                )
